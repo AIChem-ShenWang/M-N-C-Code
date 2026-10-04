@@ -2,7 +2,7 @@
 
 Code and data set for the paper "Data-driven Insight into M−N₄−C Stability: Guidance towards Large-scale Material Screening".
 
-Runs on Python 3.9. `environment.yml` creates the conda environment `material`; `pkgs.txt` lists the same direct dependencies. `shap` and `TorchSisso` come from PyPI (see the file headers), and `stable table generator.py` also needs `pdftotext` from **poppler-utils**.
+Runs on Python 3.9. `environment.yml` creates the conda environment `material` and `pkgs.txt` lists the same direct dependencies.
 
 ### `script`
 

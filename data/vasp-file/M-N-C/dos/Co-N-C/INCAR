@@ -1,0 +1,36 @@
+SYSTEM = Co-N-C
+ISTART = 0
+ICHARG = 11
+ISPIN = 2
+PREC = Accurate
+
+ALGO = All
+NELM = 200
+EDIFF = 1E-5
+ENCUT = 520
+
+# 固定离子位置
+IBRION = -1
+NSW = 0
+
+# 范德华修正
+IVDW = 11
+
+# DOS计算专用参数：电荷密度固定，波函数迭代至收敛
+ISMEAR = 0
+SIGMA = 0.05
+NEDOS = 2000
+LORBIT = 11
+
+# 波函数与电荷密度无需回写
+LWAVE = .FALSE.
+LCHARG = .FALSE.
+
+LASPH = .TRUE.
+ISYM = 0
+LDAU = .TRUE.
+LDAUTYPE = 2
+LDAUL = -1 -1 2
+LDAUU = 0 0 4.0
+LDAUJ = 0 0 0.0
+LMAXMIX = 4

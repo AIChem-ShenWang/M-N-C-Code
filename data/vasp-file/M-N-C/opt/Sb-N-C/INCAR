@@ -1,0 +1,25 @@
+SYSTEM = Sb-N-C
+ISTART = 1
+ICHARG = 1
+ISPIN = 2
+PREC = Accurate
+
+ALGO = Normal
+NELM = 80
+EDIFF = 1E-5
+ENCUT = 520
+
+IBRION = 1
+POTIM = 0.2
+NSW = 300
+ISIF = 2
+EDIFFG = -0.03
+IVDW = 11 # DFT-D3范德华修正
+
+ISMEAR = 0
+SIGMA = 0.1
+LREAL = Auto # 加速项
+
+LASPH = .TRUE.
+ISYM = 0
+MAGMOM = 44*0.0 4*0.0 3.0

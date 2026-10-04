@@ -1,0 +1,34 @@
+SYSTEM = Sm atom std U, VeryFast
+ISTART = 0
+ICHARG = 2
+ISPIN = 2
+MAGMOM = 6
+NUPDOWN = 6
+PREC = Accurate
+
+ALGO = VeryFast
+LSUBROT = .FALSE.
+NELM = 200
+EDIFF = 1E-5
+ENCUT = 520
+
+IBRION = -1
+NSW = 0
+ISIF = 0
+
+ISMEAR = 0
+SIGMA = 0.05
+
+LREAL = .FALSE.
+LASPH = .TRUE.
+ISYM = 0
+
+LWAVE = F
+LCHARG = F
+
+LDAU = .TRUE.
+LDAUTYPE = 2
+LDAUL = 3
+LDAUU = 5.0
+LDAUJ = 0.0
+LMAXMIX = 6

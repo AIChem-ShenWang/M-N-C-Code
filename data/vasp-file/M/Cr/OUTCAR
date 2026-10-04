@@ -1,0 +1,1801 @@
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Nov 21 2023 15:34:30) complex          
+  
+ executed on             LinuxIFC date 2026.09.21  17:37:28
+ running on  256 total cores
+ distrk:  each k-point on  256 cores,    1 groups
+ distr:  one band on NCORES_PER_BAND=   1 cores,  256 groups
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ INCAR:
+ POTCAR:   PAW_PBE Cr_pv 07Sep2000                
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|      For optimal performance we recommend to set                            |
+|        NCORE= 4 - approx SQRT( number of cores)                             |
+|      NCORE specifies how many cores store one orbital (NPAR=cpu/NCORE).     |
+|      This setting can  greatly improve the performance of VASP for DFT.     |
+|      The default,   NCORE=1            might be grossly inefficient         |
+|      on modern multi-core architectures or massively parallel machines.     |
+|      Do your own testing !!!!                                               |
+|      Unfortunately you need to use the default for GW and RPA calculations. |
+|      (for HF NCORE is supported but not extensively tested yet)             |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ POTCAR:   PAW_PBE Cr_pv 07Sep2000                
+   VRHFIN =Cr : p6d5s1                                                          
+   LEXCH  = PE                                                                  
+   EATOM  =  1647.5667 eV,  121.0927 Ry                                         
+                                                                                
+   TITEL  = PAW_PBE Cr_pv 07Sep2000                                             
+   LULTRA =        F    use ultrasoft PP ?                                      
+   IUNSCR =        1    unscreen: 0-lin 1-nonlin 2-no                           
+   RPACOR =    2.080    partial core radius                                     
+   POMASS =   51.996; ZVAL   =   12.000    mass and valenz                      
+   RCORE  =    2.300    outmost cutoff radius                                   
+   RWIGS  =    2.500; RWIGS  =    1.323    wigner-seitz radius (au A)           
+   ENMAX  =  265.683; ENMIN  =  199.262 eV                                      
+   RCLOC  =    1.721    cutoff for local pot                                    
+   LCOR   =        T    correct aug charges                                     
+   LPAW   =        T    paw PP                                                  
+   EAUG   =  519.424                                                            
+   DEXC   =    -.003                                                            
+   RMAX   =    2.829    core radius for proj-oper                               
+   RAUG   =    1.300    factor for augmentation sphere                          
+   RDEP   =    2.447    radius for radial grids                                 
+   QCUT   =   -4.419; QGAM   =    8.838    optimization parameters              
+                                                                                
+   Description                                                                  
+     l     E      TYP  RCUT    TYP  RCUT                                        
+     1   .000     23  2.000                                                     
+     1   .100     23  2.000                                                     
+     2   .000     23  2.300                                                     
+     2   .000     23  2.300                                                     
+     0   .000     23  2.300                                                     
+     0   .000     23  2.300                                                     
+     3   .000      7   .000                                                     
+  local pseudopotential read in
+  partial core-charges read in
+  atomic valenz-charges read in
+  non local Contribution for L=           1  read in
+    real space projection operators read in
+  non local Contribution for L=           1  read in
+    real space projection operators read in
+  non local Contribution for L=           2  read in
+    real space projection operators read in
+  non local Contribution for L=           2  read in
+    real space projection operators read in
+  non local Contribution for L=           0  read in
+    real space projection operators read in
+  non local Contribution for L=           0  read in
+    real space projection operators read in
+    PAW grid and wavefunctions read in
+ 
+   number of l-projection  operators is LMAX  =           6
+   number of lm-projection operators is LMMAX =          18
+ 
+ PAW_PBE Cr_pv 07Sep2000                :
+ energy of atom  1       EATOM=-1647.5667
+ kinetic energy error for atom=    0.0057 (will be added to EATOM!!)
+ 
+ 
+ POSCAR: Cr                                      
+  positions in direct lattice
+  No initial velocities read in
+ exchange correlation table for  LEXCH =        8
+   RHO(1)=    0.500       N(1)  =     2000
+   RHO(2)=  100.500       N(2)  =     4000
+
+ VTST: version 3.2, (02/03/18)
+
+ CHAIN: initializing optimizer
+ 
+ OPT: Using VASP Dynamics algorithm
+ CHAIN: Read ICHAIN            0
+ 
+ POSCAR: Cr                                      
+  positions in direct lattice
+  No initial velocities read in
+ 
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ ion  position               nearest neighbor table
+   1  0.010  0.010  0.751-
+ 
+
+IMPORTANT INFORMATION: All symmetrisations will be switched off!
+NOSYMM: (Re-)initialisation of all symmetry stuff for point group C_1.
+
+ 
+ 
+
+Automatic generation of k-mesh.
+ generate k-points for:    1    1    1
+Space group operators:
+ irot       det(A)        alpha          n_x          n_y          n_z        tau_x        tau_y        tau_z
+    1     1.000000     0.000000     1.000000     0.000000     0.000000     0.000000     0.000000     0.000000
+ 
+ Subroutine IBZKPT returns following result:
+ ===========================================
+ 
+ Found      1 irreducible k-points:
+ 
+ Following reciprocal coordinates:
+            Coordinates               Weight
+  0.000000  0.000000  0.000000      1.000000
+ 
+ Following cartesian coordinates:
+            Coordinates               Weight
+  0.000000  0.000000  0.000000      1.000000
+ 
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+ Dimension of arrays:
+   k-points           NKPTS =      1   k-points in BZ     NKDIM =      1   number of bands    NBANDS=    256
+   number of dos      NEDOS =    301   number of ions     NIONS =      1
+   non local maximal  LDIM  =      6   non local SUM 2l+1 LMDIM =     18
+   total plane-waves  NPLWV = ******
+   max r-space proj   IRMAX =      1   max aug-charges    IRDMAX=  14683
+   dimension x,y,z NGX =   112 NGY =  112 NGZ =  112
+   dimension x,y,z NGXF=   224 NGYF=  224 NGZF=  224
+   support grid    NGXF=   224 NGYF=  224 NGZF=  224
+   ions per type =               1
+   NGX,Y,Z   is equivalent  to a cutoff of  12.41, 12.41, 12.41 a.u.
+   NGXF,Y,Z  is equivalent  to a cutoff of  24.83, 24.83, 24.83 a.u.
+
+ SYSTEM =  Cr                                      
+ POSCAR =  Cr                                      
+
+ Startparameter for this run:
+   NWRITE =      2    write-flag & timer
+   PREC   = accura    normal or accurate (medium, high low for compatibility)
+   ISTART =      0    job   : 0-new  1-cont  2-samecut
+   ICHARG =      2    charge: 1-file 2-atom 10-const
+   ISPIN  =      2    spin polarized calculation?
+   LNONCOLLINEAR =      F non collinear calculations
+   LSORBIT =      F    spin-orbit coupling
+   INIWAV =      1    electr: 0-lowe 1-rand  2-diag
+   LASPH  =      T    aspherical Exc in radial PAW
+   METAGGA=      F    non-selfconsistent MetaGGA calc.
+
+ Electronic Relaxation 1
+   ENCUT  =  520.0 eV  38.22 Ry    6.18 a.u.  27.89 27.89 27.89*2*pi/ulx,y,z
+   ENINI  =  520.0     initial cutoff
+   ENAUG  =  519.4 eV  augmentation charge cutoff
+   NELM   =    200;   NELMIN=  2; NELMDL= -5     # of ELM steps 
+   EDIFF  = 0.1E-04   stopping-criterion for ELM
+   LREAL  =      F    real-space projection
+   NLSPLINE    = F    spline interpolate recip. space projectors
+   LCOMPAT=      F    compatible to vasp.4.4
+   GGA_COMPAT  = T    GGA compatible to vasp.4.4-vasp.4.6
+   LMAXPAW     = -100 max onsite density
+   LMAXMIX     =    4 max onsite mixed and CHGCAR
+   VOSKOWN=      0    Vosko Wilk Nusair interpolation
+   ROPT   =    0.00000
+ Ionic relaxation
+   EDIFFG = 0.1E-03   stopping-criterion for IOM
+   NSW    =      0    number of steps for IOM
+   NBLOCK =      1;   KBLOCK =      1    inner block; outer block 
+   IBRION =     -1    ionic relax: 0-MD 1-quasi-New 2-CG
+   NFREE  =      0    steps in history (QN), initial steepest desc. (CG)
+   ISIF   =      0    stress and relaxation
+   IWAVPR =     10    prediction:  0-non 1-charg 2-wave 3-comb
+   ISYM   =      0    0-nonsym 1-usesym 2-fastsym
+   LCORR  =      T    Harris-Foulkes like correction to forces
+
+   POTIM  = 0.5000    time-step for ionic-motion
+   TEIN   =    0.0    initial temperature
+   TEBEG  =    0.0;   TEEND  =   0.0 temperature during run
+   SMASS  =  -3.00    Nose mass-parameter (am)
+   estimated Nose-frequenzy (Omega)   =  0.10E-29 period in steps =****** mass=  -0.514E-26a.u.
+   SCALEE = 1.0000    scale energy and forces
+   NPACO  =    256;   APACO  = 16.0  distance and # of slots for P.C.
+   PSTRESS=    0.0 pullay stress
+
+  Mass of Ions in am
+   POMASS =  52.00
+  Ionic Valenz
+   ZVAL   =  12.00
+  Atomic Wigner-Seitz radii
+   RWIGS  =  -1.00
+  virtual crystal weights 
+   VCA    =   1.00
+   NELECT =      12.0000    total number of electrons
+   NUPDOWN=       6.0000    fix difference up-down
+
+ DOS related values:
+   EMIN   =  10.00;   EMAX   =-10.00  energy-range for DOS
+   EFERMI =   0.00
+   ISMEAR =     0;   SIGMA  =   0.05  broadening in eV -4-tet -1-fermi 0-gaus
+
+ Electronic relaxation 2 (details)
+   IALGO  =     58    algorithm
+   LDIAG  =      T    sub-space diagonalisation (order eigenvalues)
+   LSUBROT=      F    optimize rotation matrix (better conditioning)
+   TURBO    =      0    0=normal 1=particle mesh
+   IRESTART =      0    0=no restart 2=restart with 2 vectors
+   NREBOOT  =      0    no. of reboots
+   NMIN     =      0    reboot dimension
+   EREF     =   0.00    reference energy to select bands
+   IMIX   =      4    mixing-type and parameters
+     AMIX     =   0.40;   BMIX     =  1.00
+     AMIX_MAG =   1.60;   BMIX_MAG =  1.00
+     AMIN     =   0.10
+     WC   =   100.;   INIMIX=   1;  MIXPRE=   1;  MAXMIX= -45
+
+ Intra band minimization:
+   WEIMIN = 0.0000     energy-eigenvalue tresh-hold
+   EBREAK =  0.98E-08  absolut break condition
+   DEPER  =   0.30     relativ break condition  
+
+   TIME   =   0.40     timestep for ELM
+
+  volume/ion in A,a.u.               =    3375.00     22775.62
+  Fermi-wavevector in a.u.,A,eV,Ry     =   0.249868  0.472182  0.849466  0.062434
+  Thomas-Fermi vector in A             =   1.065882
+ 
+ Write flags
+   LWAVE        =      F    write WAVECAR
+   LDOWNSAMPLE  =      F    k-point downsampling of WAVECAR
+   LCHARG       =      F    write CHGCAR
+   LVTOT        =      F    write LOCPOT, total local potential
+   LVHAR        =      F    write LOCPOT, Hartree potential only
+   LELF         =      F    write electronic localiz. function (ELF)
+   LORBIT       =      0    0 simple, 1 ext, 2 COOP (PROOUT), +10 PAW based schemes
+
+
+ Dipole corrections
+   LMONO  =      F    monopole corrections only (constant potential shift)
+   LDIPOL =      F    correct potential (dipole corrections)
+   IDIPOL =      0    1-x, 2-y, 3-z, 4-all directions 
+   EPSILON=  1.0000000 bulk dielectric constant
+
+ LDA+U is selected, type is set to LDAUTYPE =  2
+   angular momentum for each species LDAUL =     2
+   U (eV)           for each species LDAUU =   4.0
+   J (eV)           for each species LDAUJ =   0.0
+ Exchange correlation treatment:
+   GGA     =    --    GGA type
+   LEXCH   =     8    internal setting for exchange type
+   VOSKOWN=      0    Vosko Wilk Nusair interpolation
+   LHFCALC =     F    Hartree Fock is set to
+   LHFONE  =     F    Hartree Fock one center treatment
+   AEXX    =    0.0000 exact exchange contribution
+
+ Linear response parameters
+   LEPSILON=     F    determine dielectric tensor
+   LRPA    =     F    only Hartree local field effects (RPA)
+   LNABLA  =     F    use nabla operator in PAW spheres
+   LVEL    =     F    velocity operator in full k-point grid
+   LINTERFAST=   F  fast interpolation
+   KINTER  =     0    interpolate to denser k-point grid
+   CSHIFT  =0.1000    complex shift for real part using Kramers Kronig
+   OMEGAMAX=  -1.0    maximum frequency
+   DEG_THRESHOLD= 0.2000000E-02 threshold for treating states as degnerate
+   RTIME   =   -0.100 relaxation time in fs
+  (WPLASMAI=    0.000 imaginary part of plasma frequency in eV, 0.658/RTIME)
+   DFIELD  = 0.0000000 0.0000000 0.0000000 field for delta impulse in time
+ 
+ Orbital magnetization related:
+   ORBITALMAG=     F  switch on orbital magnetization
+   LCHIMAG   =     F  perturbation theory with respect to B field
+   DQ        =  0.001000  dq finite difference perturbation B field
+   LLRAUG    =     F  two centre corrections for induced B field
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ Static calculation
+ charge density and potential will be updated during run
+ spin polarized calculation
+ Conjugate gradient for all bands (Freysoldt, et al. PRB 79, 241103 (2009))
+ preconditioned conjugated gradient                                        
+ perform sub-space diagonalisation
+    before iterative eigenvector-optimisation
+ modified Broyden-mixing scheme, WC =      100.0
+ initial mixing is a Kerker type mixing with AMIX =  0.4000 and BMIX =      1.0000
+ Hartree-type preconditioning will be used
+ using additional bands          250
+ reciprocal scheme for non local part
+ use partial core corrections
+ no Harris-corrections to forces 
+ use gradient corrections 
+ use of overlap-Matrix (Vanderbilt PP)
+ Gauss-broadening in eV      SIGMA  =   0.05
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+  energy-cutoff  :      520.00
+  volume of cell :     3375.00
+      direct lattice vectors                 reciprocal lattice vectors
+    15.000000000  0.000000000  0.000000000     0.066666667  0.000000000  0.000000000
+     0.000000000 15.000000000  0.000000000     0.000000000  0.066666667  0.000000000
+     0.000000000  0.000000000 15.000000000     0.000000000  0.000000000  0.066666667
+
+  length of vectors
+    15.000000000 15.000000000 15.000000000     0.066666667  0.066666667  0.066666667
+
+
+ 
+ k-points in units of 2pi/SCALE and weight: read from INCAR                         
+   0.00000000  0.00000000  0.00000000       1.000
+ 
+ k-points in reciprocal lattice and weights: read from INCAR                         
+   0.00000000  0.00000000  0.00000000       1.000
+ 
+ position of ions in fractional coordinates (direct lattice) 
+   0.01000000  0.01000000  0.75100000
+ 
+ position of ions in cartesian coordinates  (Angst):
+   0.15000000  0.15000000 11.26500000
+ 
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ k-point  1 :   0.0000 0.0000 0.0000  plane waves:   90879
+
+ maximum and minimum number of plane-waves per node :     90879    90879
+
+ maximum number of plane-waves:     90879
+ maximum index in each direction: 
+   IXMAX=   27   IYMAX=   27   IZMAX=   27
+   IXMIN=  -27   IYMIN=  -27   IZMIN=  -27
+
+
+ serial   3D FFT for wavefunctions
+ parallel 3D FFT for charge:
+    minimum data exchange during FFTs selected (reduces bandwidth)
+
+
+ total amount of memory used by VASP MPI-rank0   177231. kBytes
+=======================================================================
+
+   base      :      30000. kBytes
+   nonl-proj :      14540. kBytes
+   fftplans  :       7479. kBytes
+   grid      :     116433. kBytes
+   one-center:         31. kBytes
+   wavefun   :       8748. kBytes
+ 
+     INWAV:  cpu time    0.0000: real time    0.0000
+ Broyden mixing: mesh for mixing (old mesh)
+   NGX = 55   NGY = 55   NGZ = 55
+  (NGX  =224   NGY  =224   NGZ  =224)
+  gives a total of 166375 points
+
+ initial charge density was supplied:
+ charge density of overlapping atoms calculated
+ number of electron      12.0000000 magnetization       6.0000000
+ keeping initial charge density in first step
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ Maximum index for augmentation-charges          687 (set IRDMAX)
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ First call to EWALD:  gamma=   0.118
+ Maximum number of real-space cells 3x 3x 3
+ Maximum number of reciprocal cells 3x 3x 3
+
+    FEWALD:  cpu time    0.0159: real time    0.0173
+
+
+--------------------------------------- Iteration      1(   1)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.2094: real time    2.2514
+    SETDIJ:  cpu time    0.4288: real time    0.4564
+    TRIAL :  cpu time   12.5618: real time   12.8325
+    CORREC:  cpu time    0.0189: real time    0.0246
+    --------------------------------------------
+      LOOP:  cpu time   15.2282: real time   15.5805
+
+ eigenvalue-minimisations  :  1536
+ total energy-change (2. order) : 0.2035539E+01  (-0.4529559E+03)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part       12.0000000 magnetization       6.0000000
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1165.69300021
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.71593536
+  PAW double counting   =      1172.76058381    -1216.09873211
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -296.56762293
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =         2.03553876 eV
+
+  energy without entropy =        2.03553876  energy(sigma->0) =        2.03553876
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   2)  ---------------------------------------
+
+
+    TRIAL :  cpu time   31.4373: real time   35.0934
+    CORREC:  cpu time    0.1789: real time    0.1849
+    --------------------------------------------
+      LOOP:  cpu time   31.6223: real time   35.3381
+
+ eigenvalue-minimisations  :  1536
+ total energy-change (2. order) :-0.4814836E+01  (-0.4814836E+01)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part       12.0000000 magnetization       6.0000000
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1165.69300021
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.71593536
+  PAW double counting   =      1172.76058381    -1216.09873211
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -301.38245848
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -2.77929679 eV
+
+  energy without entropy =       -2.77929679  energy(sigma->0) =       -2.77929679
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   3)  ---------------------------------------
+
+
+    TRIAL :  cpu time   10.7606: real time   11.2230
+    CORREC:  cpu time    0.0184: real time    0.0184
+    --------------------------------------------
+      LOOP:  cpu time   10.8301: real time   11.2930
+
+ eigenvalue-minimisations  :  1024
+ total energy-change (2. order) :-0.2271241E-02  (-0.2271241E-02)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part       12.0000000 magnetization       6.0000000
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1165.69300021
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.71593536
+  PAW double counting   =      1172.76058381    -1216.09873211
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -301.38472972
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -2.78156803 eV
+
+  energy without entropy =       -2.78156803  energy(sigma->0) =       -2.78156803
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   4)  ---------------------------------------
+
+
+    TRIAL :  cpu time   22.2353: real time   22.4204
+    CORREC:  cpu time    0.0207: real time    0.0207
+    --------------------------------------------
+      LOOP:  cpu time   22.2622: real time   22.4474
+
+ eigenvalue-minimisations  :  2048
+ total energy-change (2. order) :-0.2789800E-04  (-0.2789800E-04)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part       12.0000000 magnetization       6.0000000
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1165.69300021
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.71593536
+  PAW double counting   =      1172.76058381    -1216.09873211
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -301.38475762
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -2.78159593 eV
+
+  energy without entropy =       -2.78159593  energy(sigma->0) =       -2.78159593
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   5)  ---------------------------------------
+
+
+    TRIAL :  cpu time    7.6920: real time    7.7585
+    CORREC:  cpu time    0.0210: real time    0.0215
+    CHARGE:  cpu time    1.0702: real time    1.1078
+    --------------------------------------------
+      LOOP:  cpu time    8.7884: real time    8.8948
+
+ eigenvalue-minimisations  :  1024
+ total energy-change (2. order) :-0.3308628E-07  (-0.3309456E-07)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.3783433 magnetization       2.8784991
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1165.69300021
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.71593536
+  PAW double counting   =      1172.76058381    -1216.09873211
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -301.38475765
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -2.78159597 eV
+
+  energy without entropy =       -2.78159597  energy(sigma->0) =       -2.78159597
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   6)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.2925: real time    2.3111
+    SETDIJ:  cpu time    0.4253: real time    0.4280
+    TRIAL :  cpu time    3.3781: real time    3.7627
+    CORREC:  cpu time    5.2379: real time    5.4216
+    CHARGE:  cpu time    1.0696: real time    1.0779
+    --------------------------------------------
+      LOOP:  cpu time   12.4284: real time   13.0263
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.1182600E+01  (-0.5798070E+00)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1625450 magnetization       2.6855021
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1219.06601553
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        57.13278977
+  PAW double counting   =      1242.77194808    -1285.92626733
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -250.79502618
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -3.96419635 eV
+
+  energy without entropy =       -3.96419635  energy(sigma->0) =       -3.96419635
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   7)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.1992: real time    2.2183
+    SETDIJ:  cpu time    0.4236: real time    0.4263
+    TRIAL :  cpu time    3.1152: real time    3.2326
+    CORREC:  cpu time    5.1942: real time    5.3626
+    CHARGE:  cpu time    1.0717: real time    1.0914
+    --------------------------------------------
+      LOOP:  cpu time   12.0266: real time   12.3543
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.5761244E+00  (-0.3602995E-01)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1601858 magnetization       2.6481246
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1194.43532563
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.98724117
+  PAW double counting   =      1235.93998850    -1274.29768044
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -279.65291916
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.54032073 eV
+
+  energy without entropy =       -4.54032073  energy(sigma->0) =       -4.54032073
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   8)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.1678: real time    2.2202
+    SETDIJ:  cpu time    0.4054: real time    0.4255
+    TRIAL :  cpu time    3.1838: real time    3.3486
+    CORREC:  cpu time    5.3107: real time    5.3964
+    CHARGE:  cpu time    1.2000: real time    1.2002
+    --------------------------------------------
+      LOOP:  cpu time   12.2908: real time   12.6139
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.3604965E-01  (-0.2875326E-01)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1600075 magnetization       2.6209857
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1192.44838219
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.90023496
+  PAW double counting   =      1233.53167885    -1271.94469456
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -281.53358227
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.57637037 eV
+
+  energy without entropy =       -4.57637037  energy(sigma->0) =       -4.57637037
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   9)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.2126: real time    2.2131
+    SETDIJ:  cpu time    0.4429: real time    0.4429
+    TRIAL :  cpu time    3.1791: real time    3.2674
+    CORREC:  cpu time    5.8440: real time    5.9228
+    CHARGE:  cpu time    1.0733: real time    1.0735
+    --------------------------------------------
+      LOOP:  cpu time   12.7741: real time   12.9420
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.2864411E-01  (-0.1278252E-01)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1548481 magnetization       2.6188420
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1189.17817378
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.77151722
+  PAW double counting   =      1225.51047652    -1264.22811248
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -284.39909680
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.60501448 eV
+
+  energy without entropy =       -4.60501448  energy(sigma->0) =       -4.60501448
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  10)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.2521: real time    2.2526
+    SETDIJ:  cpu time    0.4256: real time    0.4257
+    TRIAL :  cpu time    3.2243: real time    3.2986
+    CORREC:  cpu time    5.3936: real time    5.4793
+    CHARGE:  cpu time    1.3571: real time    1.3575
+    --------------------------------------------
+      LOOP:  cpu time   12.6763: real time   12.8372
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.1277325E-01  (-0.4083969E-02)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1526993 magnetization       2.6220831
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1186.82485246
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.68046904
+  PAW double counting   =      1220.19864307    -1259.03727927
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -286.55314295
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.61778773 eV
+
+  energy without entropy =       -4.61778773  energy(sigma->0) =       -4.61778773
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  11)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.2571: real time    2.2576
+    SETDIJ:  cpu time    0.4268: real time    0.4269
+    TRIAL :  cpu time    3.1993: real time    3.2871
+    CORREC:  cpu time    5.3153: real time    5.3962
+    CHARGE:  cpu time    1.0894: real time    1.0899
+    --------------------------------------------
+      LOOP:  cpu time   12.3108: real time   12.4807
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.4082564E-02  (-0.1330244E-02)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1508064 magnetization       2.6227220
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1186.22004705
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.65778799
+  PAW double counting   =      1219.08178845    -1257.95334489
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -287.10642963
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.62187030 eV
+
+  energy without entropy =       -4.62187030  energy(sigma->0) =       -4.62187030
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  12)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.1974: real time    2.1984
+    SETDIJ:  cpu time    0.4303: real time    0.4305
+    TRIAL :  cpu time    3.1842: real time    3.2729
+    CORREC:  cpu time    5.2719: real time    5.3788
+    CHARGE:  cpu time    1.0800: real time    1.0807
+    --------------------------------------------
+      LOOP:  cpu time   12.1860: real time   12.3833
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.1329957E-02  (-0.4850522E-03)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1522873 magnetization       2.6234019
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1186.12163406
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.65317369
+  PAW double counting   =      1219.49076891    -1258.32311951
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -287.24076412
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.62320025 eV
+
+  energy without entropy =       -4.62320025  energy(sigma->0) =       -4.62320025
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  13)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.2478: real time    2.2489
+    SETDIJ:  cpu time    0.4277: real time    0.4283
+    TRIAL :  cpu time    3.2261: real time    3.3048
+    CORREC:  cpu time    5.4691: real time    5.5759
+    CHARGE:  cpu time    1.0735: real time    1.0739
+    --------------------------------------------
+      LOOP:  cpu time   12.4671: real time   12.6545
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.4843350E-03  (-0.1764005E-03)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1513613 magnetization       2.6218662
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1186.47661490
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.66791088
+  PAW double counting   =      1220.22506458    -1259.06415798
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -286.89426199
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.62368459 eV
+
+  energy without entropy =       -4.62368459  energy(sigma->0) =       -4.62368459
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  14)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.2869: real time    2.2900
+    SETDIJ:  cpu time    0.4256: real time    0.4257
+    TRIAL :  cpu time    3.4398: real time    3.5274
+    CORREC:  cpu time    5.3743: real time    5.4655
+    CHARGE:  cpu time    1.0945: real time    1.0947
+    --------------------------------------------
+      LOOP:  cpu time   12.6441: real time   12.8264
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.1762790E-03  (-0.7370109E-04)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1525586 magnetization       2.6222510
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1186.48976233
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.66733813
+  PAW double counting   =      1220.59419210    -1259.39299667
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -286.92100694
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.62386087 eV
+
+  energy without entropy =       -4.62386087  energy(sigma->0) =       -4.62386087
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  15)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.2672: real time    2.2681
+    SETDIJ:  cpu time    0.4318: real time    0.4322
+    TRIAL :  cpu time    3.2487: real time    3.3197
+    CORREC:  cpu time    5.3655: real time    5.5737
+    CHARGE:  cpu time    1.0700: real time    1.0709
+    --------------------------------------------
+      LOOP:  cpu time   12.4063: real time   12.6877
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.7363967E-04  (-0.2681567E-04)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1520775 magnetization       2.6215009
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1186.68550443
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.67564474
+  PAW double counting   =      1220.77616369    -1259.59035944
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -286.71825390
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.62393451 eV
+
+  energy without entropy =       -4.62393451  energy(sigma->0) =       -4.62393451
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  16)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.2950: real time    2.2956
+    SETDIJ:  cpu time    0.4315: real time    0.4317
+    TRIAL :  cpu time    3.1825: real time    3.2752
+    CORREC:  cpu time    5.3028: real time    5.3864
+    CHARGE:  cpu time    1.0775: real time    1.0779
+    --------------------------------------------
+      LOOP:  cpu time   12.3144: real time   12.4919
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.2679205E-04  (-0.1013403E-04)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1522629 magnetization       2.6215001
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1186.65495887
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.67385969
+  PAW double counting   =      1220.78723588    -1259.58975352
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -286.75871932
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.62396130 eV
+
+  energy without entropy =       -4.62396130  energy(sigma->0) =       -4.62396130
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  17)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.1985: real time    2.1995
+    SETDIJ:  cpu time    0.4299: real time    0.4305
+    TRIAL :  cpu time    3.2088: real time    3.2988
+    CORREC:  cpu time    5.3522: real time    5.4327
+    CHARGE:  cpu time    1.1388: real time    1.1396
+    --------------------------------------------
+      LOOP:  cpu time   12.3502: real time   12.5229
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.1009544E-04  (-0.3381740E-05)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1522353 magnetization       2.6214293
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1186.68543489
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.67505843
+  PAW double counting   =      1220.77003940    -1259.57877377
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -286.72323540
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.62397139 eV
+
+  energy without entropy =       -4.62397139  energy(sigma->0) =       -4.62397139
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  18)  ---------------------------------------
+
+
+    POTLOK:  cpu time    2.2315: real time    2.2324
+    SETDIJ:  cpu time    0.4218: real time    0.4220
+    TRIAL :  cpu time    3.1893: real time    3.2673
+    CORREC:  cpu time    5.4867: real time    5.5852
+    EDDIAG:  cpu time    1.8643: real time    1.8782
+    CHARGE:  cpu time    1.0819: real time    1.1038
+    --------------------------------------------
+      LOOP:  cpu time   14.2989: real time   14.5122
+
+ eigenvalue-minimisations  :     0
+ total energy-change (2. order) :-0.3363820E-05  (-0.1353399E-05)
+ number of electron      12.0000000 magnetization       6.0000000
+ augmentation part        6.1521530 magnetization       2.6213442
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.46846247
+  Ewald energy   TEWEN  =      -196.11110405
+  -Hartree energ DENC   =     -1186.68450722
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        55.67492672
+  PAW double counting   =      1220.74917967    -1259.55951047
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =      -286.72243830
+  atomic energy  EATOM  =      1647.56101641
+  ---------------------------------------------------
+  free energy    TOTEN  =        -4.62397476 eV
+
+  energy without entropy =       -4.62397476  energy(sigma->0) =       -4.62397476
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+  average scaling for gradient   1.0601
+
+
+ average (electrostatic) potential at core
+  the test charge radii are     1.0025
+  (the norm of the test charge is              1.0000)
+       1 -52.8699
+ 
+ 
+ 
+ E-fermi : -40.7451     XC(G=0):  -0.2333     alpha+bet : -0.0543
+
+
+ spin component 1
+
+ k-point     1 :       0.0000    0.0000    0.0000
+  band No.  band energies     occupation 
+      1     -45.4725      1.00000
+      2     -45.4725      1.00000
+      3     -45.4725      1.00000
+      4      -4.5857      1.00000
+      5      -4.5857      1.00000
+      6      -4.5857      1.00000
+      7      -4.5857      1.00000
+      8      -4.5857      1.00000
+      9      -4.1585      1.00000
+     10      -1.0369      0.00000
+     11      -1.0369      0.00000
+     12      -1.0369      0.00000
+     13      -0.1840      0.00000
+     14       0.4446      0.00000
+     15       0.4446      0.00000
+     16       0.5933      0.00000
+     17       0.6482      0.00000
+     18       0.6482      0.00000
+     19       0.6482      0.00000
+     20       0.8711      0.00000
+     21       0.8711      0.00000
+     22       0.8711      0.00000
+     23       1.1495      0.00000
+     24       1.1495      0.00000
+     25       1.1871      0.00000
+     26       1.1871      0.00000
+     27       1.1871      0.00000
+     28       1.3948      0.00000
+     29       1.3948      0.00000
+     30       1.3948      0.00000
+     31       1.4388      0.00000
+     32       1.7102      0.00000
+     33       1.7102      0.00000
+     34       1.7102      0.00000
+     35       1.7147      0.00000
+     36       1.9252      0.00000
+     37       1.9252      0.00000
+     38       1.9252      0.00000
+     39       2.0017      0.00000
+     40       2.0017      0.00000
+     41       2.0336      0.00000
+     42       2.5482      0.00000
+     43       2.5482      0.00000
+     44       2.5482      0.00000
+     45       2.6792      0.00000
+     46       2.6987      0.00000
+     47       2.6987      0.00000
+     48       2.6987      0.00000
+     49       2.8650      0.00000
+     50       2.8650      0.00000
+     51       2.8650      0.00000
+     52       2.8964      0.00000
+     53       2.8965      0.00000
+     54       3.0417      0.00000
+     55       3.0417      0.00000
+     56       3.0417      0.00000
+     57       3.1013      0.00000
+     58       3.1013      0.00000
+     59       3.1014      0.00000
+     60       3.1811      0.00000
+     61       3.1811      0.00000
+     62       3.2368      0.00000
+     63       3.2368      0.00000
+     64       3.2368      0.00000
+     65       3.2761      0.00000
+     66       3.4491      0.00000
+     67       3.4768      0.00000
+     68       3.4768      0.00000
+     69       3.4768      0.00000
+     70       3.5360      0.00000
+     71       3.5360      0.00000
+     72       3.5360      0.00000
+     73       3.5626      0.00000
+     74       3.8092      0.00000
+     75       3.8092      0.00000
+     76       3.8092      0.00000
+     77       3.8204      0.00000
+     78       3.8204      0.00000
+     79       3.8248      0.00000
+     80       3.8248      0.00000
+     81       3.8248      0.00000
+     82       3.8301      0.00000
+     83       3.8301      0.00000
+     84       3.8301      0.00000
+     85       3.8303      0.00000
+     86       3.8304      0.00000
+     87       3.8304      0.00000
+     88       3.8361      0.00000
+     89       3.8361      0.00000
+     90       4.3973      0.00000
+     91       4.3973      0.00000
+     92       4.3973      0.00000
+     93       4.6810      0.00000
+     94       4.8455      0.00000
+     95       4.8455      0.00000
+     96       4.8455      0.00000
+     97       4.8693      0.00000
+     98       4.8693      0.00000
+     99       4.9011      0.00000
+    100       4.9011      0.00000
+    101       4.9011      0.00000
+    102       5.2122      0.00000
+    103       5.2122      0.00000
+    104       5.2122      0.00000
+    105       5.2545      0.00000
+    106       5.2545      0.00000
+    107       5.3413      0.00000
+    108       5.4029      0.00000
+    109       5.4515      0.00000
+    110       5.4515      0.00000
+    111       5.4515      0.00000
+    112       5.4718      0.00000
+    113       5.4718      0.00000
+    114       5.4718      0.00000
+    115       5.5800      0.00000
+    116       5.7967      0.00000
+    117       5.7967      0.00000
+    118       5.7967      0.00000
+    119       5.8088      0.00000
+    120       5.8088      0.00000
+    121       5.8088      0.00000
+    122       5.8174      0.00000
+    123       5.8174      0.00000
+    124       5.8174      0.00000
+    125       5.8222      0.00000
+    126       5.8222      0.00000
+    127       5.8224      0.00000
+    128       5.8224      0.00000
+    129       5.8224      0.00000
+    130       5.8224      0.00000
+    131       5.8224      0.00000
+    132       6.1706      0.00000
+    133       6.1706      0.00000
+    134       6.1706      0.00000
+    135       6.2107      0.00000
+    136       6.2107      0.00000
+    137       6.2449      0.00000
+    138       6.2538      0.00000
+    139       6.2538      0.00000
+    140       6.2538      0.00000
+    141       6.2665      0.00000
+    142       6.2665      0.00000
+    143       6.2665      0.00000
+    144       6.2684      0.00000
+    145       6.2684      0.00000
+    146       6.2684      0.00000
+    147       6.2831      0.00000
+    148       6.2831      0.00000
+    149       6.2831      0.00000
+    150       6.5362      0.00000
+    151       6.5362      0.00000
+    152       6.5362      0.00000
+    153       6.5368      0.00000
+    154       6.5376      0.00000
+    155       6.5376      0.00000
+    156       6.9323      0.00000
+    157       6.9323      0.00000
+    158       6.9323      0.00000
+    159       7.0222      0.00000
+    160       7.0258      0.00000
+    161       7.0258      0.00000
+    162       7.0258      0.00000
+    163       7.0634      0.00000
+    164       7.0715      0.00000
+    165       7.0715      0.00000
+    166       7.0726      0.00000
+    167       7.0726      0.00000
+    168       7.0726      0.00000
+    169       7.0728      0.00000
+    170       7.0728      0.00000
+    171       7.0728      0.00000
+    172       7.0781      0.00000
+    173       7.0782      0.00000
+    174       7.0786      0.00000
+    175       7.0786      0.00000
+    176       7.0786      0.00000
+    177       7.0884      0.00000
+    178       7.0884      0.00000
+    179       7.0884      0.00000
+    180       7.5388      0.00000
+    181       7.5388      0.00000
+    182       7.5388      0.00000
+    183       7.6256      0.00000
+    184       7.6256      0.00000
+    185       7.6256      0.00000
+    186       7.6354      0.00000
+    187       7.6526      0.00000
+    188       7.9486      0.00000
+    189       7.9486      0.00000
+    190       7.9486      0.00000
+    191       8.0025      0.00000
+    192       8.0025      0.00000
+    193       8.0025      0.00000
+    194       8.0348      0.00000
+    195       8.0348      0.00000
+    196       8.0348      0.00000
+    197       8.0360      0.00000
+    198       8.0360      0.00000
+    199       8.1208      0.00000
+    200       8.3951      0.00000
+    201       8.3951      0.00000
+    202       8.3951      0.00000
+    203       8.4092      0.00000
+    204       8.4092      0.00000
+    205       8.4317      0.00000
+    206       8.4317      0.00000
+    207       8.4317      0.00000
+    208       8.4386      0.00000
+    209       8.4386      0.00000
+    210       8.4386      0.00000
+    211       8.4468      0.00000
+    212       8.7361      0.00000
+    213       8.7983      0.00000
+    214       8.7983      0.00000
+    215       8.7983      0.00000
+    216       8.8080      0.00000
+    217       8.8080      0.00000
+    218       8.8080      0.00000
+    219       8.9439      0.00000
+    220       8.9505      0.00000
+    221       8.9505      0.00000
+    222       8.9505      0.00000
+    223       8.9564      0.00000
+    224       8.9564      0.00000
+    225       8.9620      0.00000
+    226       8.9620      0.00000
+    227       8.9620      0.00000
+    228       8.9832      0.00000
+    229       8.9832      0.00000
+    230       8.9832      0.00000
+    231       8.9865      0.00000
+    232       8.9866      0.00000
+    233       8.9876      0.00000
+    234       8.9876      0.00000
+    235       8.9876      0.00000
+    236       9.1710      0.00000
+    237       9.1710      0.00000
+    238       9.1710      0.00000
+    239       9.1770      0.00000
+    240       9.1770      0.00000
+    241       9.1770      0.00000
+    242       9.1772      0.00000
+    243       9.1772      0.00000
+    244       9.1780      0.00000
+    245       9.1780      0.00000
+    246       9.1795      0.00000
+    247       9.1795      0.00000
+    248       9.1795      0.00000
+    249       9.1809      0.00000
+    250       9.1809      0.00000
+    251       9.1809      0.00000
+    252       9.2494      0.00000
+    253       9.2502      0.00000
+    254       9.2506      0.00000
+    255       9.2524      0.00000
+    256       9.2534      0.00000
+
+ spin component 2
+
+ k-point     1 :       0.0000    0.0000    0.0000
+  band No.  band energies     occupation 
+      1     -41.0753      1.00000
+      2     -41.0753      1.00000
+      3     -41.0753      1.00000
+      4      -1.0985      0.00000
+      5       0.1295      0.00000
+      6       0.6870      0.00000
+      7       0.6870      0.00000
+      8       0.6871      0.00000
+      9       0.7166      0.00000
+     10       0.7166      0.00000
+     11       0.9605      0.00000
+     12       1.2611      0.00000
+     13       1.2611      0.00000
+     14       1.2612      0.00000
+     15       1.3773      0.00000
+     16       1.3773      0.00000
+     17       1.3773      0.00000
+     18       1.3810      0.00000
+     19       1.3810      0.00000
+     20       1.3874      0.00000
+     21       1.3874      0.00000
+     22       1.3874      0.00000
+     23       1.8241      0.00000
+     24       1.9355      0.00000
+     25       1.9355      0.00000
+     26       1.9356      0.00000
+     27       2.0098      0.00000
+     28       2.0098      0.00000
+     29       2.0098      0.00000
+     30       2.0589      0.00000
+     31       2.3733      0.00000
+     32       2.3734      0.00000
+     33       2.5057      0.00000
+     34       2.5297      0.00000
+     35       2.5297      0.00000
+     36       2.5297      0.00000
+     37       2.5731      0.00000
+     38       2.5731      0.00000
+     39       2.5731      0.00000
+     40       2.8217      0.00000
+     41       2.8217      0.00000
+     42       2.9827      0.00000
+     43       3.0036      0.00000
+     44       3.0036      0.00000
+     45       3.0036      0.00000
+     46       3.3912      0.00000
+     47       3.3925      0.00000
+     48       3.3925      0.00000
+     49       3.3925      0.00000
+     50       3.3929      0.00000
+     51       3.3929      0.00000
+     52       3.3938      0.00000
+     53       3.3938      0.00000
+     54       3.3938      0.00000
+     55       3.3947      0.00000
+     56       3.3947      0.00000
+     57       3.3947      0.00000
+     58       3.3947      0.00000
+     59       3.3947      0.00000
+     60       3.3948      0.00000
+     61       3.4639      0.00000
+     62       3.4639      0.00000
+     63       3.4639      0.00000
+     64       3.5199      0.00000
+     65       3.5201      0.00000
+     66       3.8182      0.00000
+     67       3.8182      0.00000
+     68       3.8182      0.00000
+     69       3.8434      0.00000
+     70       4.0605      0.00000
+     71       4.0605      0.00000
+     72       4.0605      0.00000
+     73       4.0610      0.00000
+     74       4.0625      0.00000
+     75       4.0625      0.00000
+     76       4.0626      0.00000
+     77       4.0629      0.00000
+     78       4.0629      0.00000
+     79       4.0629      0.00000
+     80       4.0634      0.00000
+     81       4.0634      0.00000
+     82       4.0634      0.00000
+     83       4.0637      0.00000
+     84       4.0637      0.00000
+     85       4.1149      0.00000
+     86       4.1150      0.00000
+     87       4.1567      0.00000
+     88       4.1567      0.00000
+     89       4.1568      0.00000
+     90       5.1067      0.00000
+     91       5.1068      0.00000
+     92       5.1068      0.00000
+     93       5.2438      0.00000
+     94       5.3954      0.00000
+     95       5.3954      0.00000
+     96       5.3954      0.00000
+     97       5.4158      0.00000
+     98       5.4159      0.00000
+     99       5.4274      0.00000
+    100       5.4274      0.00000
+    101       5.4274      0.00000
+    102       5.6984      0.00000
+    103       5.6984      0.00000
+    104       5.6984      0.00000
+    105       5.8309      0.00000
+    106       6.0568      0.00000
+    107       6.0623      0.00000
+    108       6.0623      0.00000
+    109       6.0623      0.00000
+    110       6.0635      0.00000
+    111       6.0635      0.00000
+    112       6.0636      0.00000
+    113       6.0672      0.00000
+    114       6.0672      0.00000
+    115       6.0675      0.00000
+    116       6.0675      0.00000
+    117       6.0675      0.00000
+    118       6.0687      0.00000
+    119       6.0687      0.00000
+    120       6.0688      0.00000
+    121       6.0689      0.00000
+    122       6.0689      0.00000
+    123       6.0689      0.00000
+    124       6.0689      0.00000
+    125       6.0689      0.00000
+    126       6.0719      0.00000
+    127       6.1003      0.00000
+    128       6.1004      0.00000
+    129       6.1255      0.00000
+    130       6.1255      0.00000
+    131       6.1255      0.00000
+    132       6.5130      0.00000
+    133       6.5130      0.00000
+    134       6.5131      0.00000
+    135       6.6073      0.00000
+    136       6.7316      0.00000
+    137       6.7316      0.00000
+    138       6.7316      0.00000
+    139       6.7334      0.00000
+    140       6.7334      0.00000
+    141       6.7336      0.00000
+    142       6.7351      0.00000
+    143       6.7351      0.00000
+    144       6.7355      0.00000
+    145       6.7356      0.00000
+    146       6.7356      0.00000
+    147       6.7357      0.00000
+    148       6.7368      0.00000
+    149       6.7368      0.00000
+    150       6.7368      0.00000
+    151       6.7510      0.00000
+    152       6.7510      0.00000
+    153       6.7510      0.00000
+    154       6.7903      0.00000
+    155       6.7903      0.00000
+    156       7.2048      0.00000
+    157       7.2048      0.00000
+    158       7.2048      0.00000
+    159       7.2958      0.00000
+    160       7.3970      0.00000
+    161       7.3970      0.00000
+    162       7.3970      0.00000
+    163       7.3975      0.00000
+    164       7.3975      0.00000
+    165       7.3979      0.00000
+    166       7.4001      0.00000
+    167       7.4045      0.00000
+    168       7.4045      0.00000
+    169       7.4045      0.00000
+    170       7.4061      0.00000
+    171       7.4061      0.00000
+    172       7.4064      0.00000
+    173       7.4064      0.00000
+    174       7.4064      0.00000
+    175       7.4226      0.00000
+    176       7.4226      0.00000
+    177       7.4226      0.00000
+    178       7.4340      0.00000
+    179       7.4341      0.00000
+    180       7.9801      0.00000
+    181       7.9801      0.00000
+    182       7.9802      0.00000
+    183       8.0438      0.00000
+    184       8.0581      0.00000
+    185       8.0808      0.00000
+    186       8.0808      0.00000
+    187       8.0808      0.00000
+    188       8.4824      0.00000
+    189       8.4824      0.00000
+    190       8.4826      0.00000
+    191       8.6527      0.00000
+    192       8.7128      0.00000
+    193       8.7128      0.00000
+    194       8.7128      0.00000
+    195       8.7348      0.00000
+    196       8.7348      0.00000
+    197       8.7348      0.00000
+    198       8.7416      0.00000
+    199       8.7416      0.00000
+    200       8.7418      0.00000
+    201       8.7418      0.00000
+    202       8.7418      0.00000
+    203       8.7421      0.00000
+    204       8.7424      0.00000
+    205       8.7435      0.00000
+    206       8.7436      0.00000
+    207       8.7486      0.00000
+    208       8.7486      0.00000
+    209       8.7486      0.00000
+    210       8.7491      0.00000
+    211       8.7493      0.00000
+    212       9.1210      0.00000
+    213       9.1215      0.00000
+    214       9.1216      0.00000
+    215       9.2906      0.00000
+    216       9.3595      0.00000
+    217       9.3681      0.00000
+    218       9.3681      0.00000
+    219       9.3681      0.00000
+    220       9.3933      0.00000
+    221       9.3951      0.00000
+    222       9.3956      0.00000
+    223       9.4087      0.00000
+    224       9.4088      0.00000
+    225       9.4089      0.00000
+    226       9.4089      0.00000
+    227       9.4093      0.00000
+    228       9.4093      0.00000
+    229       9.4093      0.00000
+    230       9.4093      0.00000
+    231       9.4093      0.00000
+    232       9.4094      0.00000
+    233       9.4103      0.00000
+    234       9.4103      0.00000
+    235       9.4106      0.00000
+    236       9.4106      0.00000
+    237       9.4106      0.00000
+    238       9.4107      0.00000
+    239       9.4108      0.00000
+    240       9.4108      0.00000
+    241       9.4108      0.00000
+    242       9.4108      0.00000
+    243       9.4108      0.00000
+    244       9.4108      0.00000
+    245       9.4108      0.00000
+    246       9.4108      0.00000
+    247       9.4110      0.00000
+    248       9.4111      0.00000
+    249       9.4114      0.00000
+    250       9.4114      0.00000
+    251       9.4115      0.00000
+    252       9.4118      0.00000
+    253       9.4118      0.00000
+    254       9.4119      0.00000
+    255       9.4119      0.00000
+    256       9.4119      0.00000
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ soft charge-density along one line, spin component           1
+         0         1         2         3         4         5         6         7         8         9
+ total charge-density along one line
+ 
+ soft charge-density along one line, spin component           2
+         0         1         2         3         4         5         6         7         8         9
+ total charge-density along one line
+ 
+ pseudopotential strength for first ion, spin component:           1
+-48.035   0.000   0.000  18.754  -0.000  -0.000  -0.000  -0.000
+  0.000 -48.035   0.000  -0.000  18.754  -0.000   0.000  -0.000
+  0.000   0.000 -48.035  -0.000  -0.000  18.754  -0.000   0.000
+ 18.754  -0.000  -0.000  -1.858   0.000   0.000   0.000   0.000
+ -0.000  18.754  -0.000   0.000  -1.858   0.000  -0.000   0.000
+ -0.000  -0.000  18.754   0.000   0.000  -1.858   0.000  -0.000
+ -0.000   0.000  -0.000   0.000  -0.000   0.000 -11.138  -0.000
+ -0.000  -0.000   0.000   0.000   0.000  -0.000  -0.000 -11.138
+  0.000  -0.000   0.000  -0.000   0.000  -0.000  -0.000   0.000
+  0.000  -0.000  -0.000  -0.000   0.000   0.000  -0.000  -0.000
+  0.000  -0.000  -0.000  -0.000   0.000   0.000  -0.000  -0.000
+  0.000  -0.000   0.000  -0.000  -0.000  -0.000   0.370   0.000
+  0.000   0.000  -0.000  -0.000  -0.000  -0.000   0.000   0.370
+ -0.000   0.000  -0.000   0.000  -0.000   0.000   0.000  -0.000
+ -0.000   0.000   0.000  -0.000  -0.000  -0.000   0.000   0.000
+ -0.000   0.000   0.000   0.000  -0.000  -0.000   0.000   0.000
+  0.000   0.000   0.000  -0.000  -0.000  -0.000  -0.000  -0.000
+ -0.000  -0.000  -0.000   0.000   0.000   0.000   0.000   0.000
+ pseudopotential strength for first ion, spin component:           2
+-45.547   0.000   0.000  17.014  -0.000  -0.000  -0.000  -0.000
+  0.000 -45.547   0.000  -0.000  17.014  -0.000   0.000  -0.000
+  0.000   0.000 -45.547  -0.000  -0.000  17.014  -0.000   0.000
+ 17.014  -0.000  -0.000  -0.780   0.000   0.000   0.000   0.000
+ -0.000  17.014  -0.000   0.000  -0.780   0.000  -0.000   0.000
+ -0.000  -0.000  17.014   0.000   0.000  -0.780   0.000  -0.000
+ -0.000   0.000  -0.000   0.000  -0.000   0.000  -5.631  -0.000
+ -0.000  -0.000   0.000   0.000   0.000  -0.000  -0.000  -5.631
+  0.000  -0.000   0.000  -0.000   0.000  -0.000  -0.000   0.000
+  0.000  -0.000  -0.000  -0.000   0.000   0.000  -0.000  -0.000
+  0.000   0.000  -0.000  -0.000  -0.000   0.000  -0.000  -0.000
+  0.000  -0.000   0.000  -0.000   0.000  -0.000  -0.237   0.000
+  0.000   0.000  -0.000  -0.000  -0.000   0.000   0.000  -0.237
+ -0.000   0.000  -0.000   0.000  -0.000   0.000   0.000  -0.000
+ -0.000   0.000   0.000   0.000  -0.000  -0.000   0.000   0.000
+ -0.000  -0.000   0.000   0.000   0.000  -0.000   0.000   0.000
+  0.000   0.000   0.000  -0.000  -0.000  -0.000  -0.000  -0.000
+ -0.000  -0.000  -0.000   0.000   0.000   0.000   0.000   0.000
+ total augmentation occupancy for first ion, spin component:           1
+  2.005   0.000   0.000   0.010   0.000   0.000   0.000   0.000  -0.000   0.000  -0.000   0.000   0.000  -0.000   0.000  -0.000
+  0.000   2.005   0.000   0.000   0.010   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000
+  0.000   0.000   2.005   0.000   0.000   0.010   0.000   0.000  -0.000   0.000   0.000   0.000   0.000  -0.000   0.000   0.000
+  0.010   0.000   0.000   0.000   0.000   0.000   0.000   0.000  -0.000   0.000  -0.000   0.000   0.000  -0.000   0.000  -0.000
+  0.000   0.010   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000
+  0.000   0.000   0.010   0.000   0.000   0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000  -0.000   0.000   0.000
+  0.000   0.000   0.000   0.000   0.000   0.000   1.086   0.000   0.000   0.000   0.000   0.187   0.000  -0.000   0.000  -0.000
+  0.000   0.000   0.000   0.000   0.000   0.000   0.000   1.086  -0.000   0.000   0.000   0.000   0.187   0.000   0.000  -0.000
+ -0.000   0.000  -0.000  -0.000   0.000  -0.000   0.000  -0.000   1.086  -0.000   0.000  -0.000   0.000   0.187   0.000   0.000
+  0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000  -0.000   1.086  -0.000   0.000   0.000   0.000   0.187   0.000
+ -0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000   0.000  -0.000   1.086   0.000  -0.000   0.000   0.000   0.187
+  0.000   0.000   0.000   0.000   0.000   0.000   0.187   0.000  -0.000   0.000   0.000   0.032   0.000  -0.000   0.000   0.000
+  0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.187   0.000   0.000  -0.000   0.000   0.032   0.000   0.000  -0.000
+ -0.000   0.000  -0.000  -0.000   0.000  -0.000  -0.000   0.000   0.187   0.000   0.000  -0.000   0.000   0.032   0.000  -0.000
+  0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.187   0.000   0.000   0.000   0.000   0.032   0.000
+ -0.000   0.000   0.000  -0.000   0.000   0.000  -0.000  -0.000   0.000   0.000   0.187   0.000  -0.000  -0.000   0.000   0.032
+ -0.000  -0.000  -0.000  -0.000  -0.000  -0.000   0.000   0.000  -0.000   0.000  -0.000   0.000   0.000   0.000   0.000  -0.000
+ -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000   0.000  -0.000  -0.000  -0.000  -0.000  -0.000
+ total augmentation occupancy for first ion, spin component:           2
+ -0.000   0.000   0.000  -0.002   0.000   0.000  -0.000  -0.000   0.000  -0.000   0.000  -0.000  -0.000   0.000  -0.000   0.000
+  0.000  -0.000   0.000   0.000  -0.002   0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000
+  0.000   0.000  -0.000   0.000   0.000  -0.002  -0.000  -0.000   0.000  -0.000  -0.000  -0.000  -0.000   0.000  -0.000  -0.000
+ -0.002   0.000   0.000  -0.000   0.000   0.000   0.000   0.000  -0.000   0.000  -0.000  -0.000  -0.000   0.000  -0.000   0.000
+  0.000  -0.002   0.000   0.000  -0.000   0.000   0.000   0.000   0.000   0.000   0.000  -0.000  -0.000  -0.000  -0.000  -0.000
+  0.000   0.000  -0.002   0.000   0.000  -0.000   0.000   0.000  -0.000   0.000   0.000  -0.000  -0.000   0.000  -0.000  -0.000
+ -0.000  -0.000  -0.000   0.000   0.000   0.000   1.086   0.000   0.000   0.000   0.000   0.187   0.000  -0.000   0.000  -0.000
+ -0.000  -0.000  -0.000   0.000   0.000   0.000   0.000   1.086  -0.000   0.000   0.000   0.000   0.187   0.000   0.000  -0.000
+  0.000  -0.000   0.000  -0.000   0.000  -0.000   0.000  -0.000   1.086  -0.000   0.000  -0.000   0.000   0.187   0.000   0.000
+ -0.000  -0.000  -0.000   0.000   0.000   0.000   0.000   0.000  -0.000   1.086  -0.000   0.000   0.000   0.000   0.187   0.000
+  0.000  -0.000  -0.000  -0.000   0.000   0.000   0.000   0.000   0.000  -0.000   1.086   0.000  -0.000   0.000   0.000   0.187
+ -0.000  -0.000  -0.000  -0.000  -0.000  -0.000   0.187   0.000  -0.000   0.000   0.000   0.032   0.000  -0.000   0.000  -0.000
+ -0.000  -0.000  -0.000  -0.000  -0.000  -0.000   0.000   0.187   0.000   0.000  -0.000   0.000   0.032   0.000   0.000  -0.000
+  0.000  -0.000   0.000   0.000  -0.000   0.000  -0.000   0.000   0.187   0.000   0.000  -0.000   0.000   0.032   0.000   0.000
+ -0.000  -0.000  -0.000  -0.000  -0.000  -0.000   0.000   0.000   0.000   0.187   0.000   0.000   0.000   0.000   0.032   0.000
+  0.000  -0.000  -0.000   0.000  -0.000  -0.000  -0.000  -0.000   0.000   0.000   0.187  -0.000  -0.000   0.000   0.000   0.032
+  0.000   0.000   0.000  -0.000  -0.000  -0.000   0.000   0.000  -0.000   0.000  -0.000   0.000   0.000   0.000   0.000   0.000
+ -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000  -0.000   0.000  -0.000  -0.000  -0.000  -0.000   0.000
+
+
+------------------------ aborting loop because EDIFF is reached ----------------------------------------
+
+
+    FORLOC:  cpu time    0.0085: real time    0.0127
+    FORNL :  cpu time    0.0415: real time    0.0574
+    FORCOR:  cpu time    2.1926: real time    2.2002
+    OFIELD:  cpu time    0.0011: real time    0.0057
+
+ VOLUME and BASIS-vectors are now :
+ -----------------------------------------------------------------------------
+  energy-cutoff  :      520.00
+  volume of cell :     3375.00
+      direct lattice vectors                 reciprocal lattice vectors
+    15.000000000  0.000000000  0.000000000     0.066666667  0.000000000  0.000000000
+     0.000000000 15.000000000  0.000000000     0.000000000  0.066666667  0.000000000
+     0.000000000  0.000000000 15.000000000     0.000000000  0.000000000  0.066666667
+
+  length of vectors
+    15.000000000 15.000000000 15.000000000     0.066666667  0.066666667  0.066666667
+
+
+ FORCES acting on ions:
+    Electron-Ion                     Ewald-Force                    Non-Local-Force
+ -----------------------------------------------------------------------------------------------
+   -.127E-02 -.103E-02 -.123E-02   -.195E-16 0.263E-16 -.546E-16   -.182E-02 -.136E-02 -.172E-02
+ -----------------------------------------------------------------------------------------------
+   -.128E-02 -.104E-02 -.124E-02   -.195E-16 0.263E-16 -.546E-16   -.182E-02 -.136E-02 -.172E-02
+ 
+ 
+ POSITION                                       TOTAL-FORCE (eV/Angst)
+ -----------------------------------------------------------------------------------
+      0.15000      0.15000     11.26500        -0.003100     -0.002394     -0.002956
+ -----------------------------------------------------------------------------------
+    total drift:                               -0.003100     -0.002394     -0.002956
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+  FREE ENERGIE OF THE ION-ELECTRON SYSTEM (eV)
+  ---------------------------------------------------
+  free  energy   TOTEN  =        -4.62397476 eV
+
+  energy  without entropy=       -4.62397476  energy(sigma->0) =       -4.62397476
+ 
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+    POTLOK:  cpu time    2.6202: real time    2.6349
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ stress matrix after NEB project (eV)
+      0.00000      0.00000      0.00000
+      0.00000      0.00000      0.00000
+      0.00000      0.00000      0.00000
+  FORCES: max atom, RMS     0.004907    0.004907
+  FORCE total and by dimension    0.004907    0.003100
+  Stress total and by dimension    0.000000    0.000000
+     LOOP+:  cpu time  256.8196: real time  264.9069
+    4ORBIT:  cpu time    0.0000: real time    0.0000
+
+ total amount of memory used by VASP MPI-rank0   177231. kBytes
+=======================================================================
+
+   base      :      30000. kBytes
+   nonl-proj :      14540. kBytes
+   fftplans  :       7479. kBytes
+   grid      :     116433. kBytes
+   one-center:         31. kBytes
+   wavefun   :       8748. kBytes
+ 
+  
+  
+ General timing and accounting informations for this job:
+ ========================================================
+  
+                  Total CPU time used (sec):      270.584
+                            User time (sec):      264.101
+                          System time (sec):        6.483
+                         Elapsed time (sec):      281.525
+  
+                   Maximum memory used (kb):      459288.
+                   Average memory used (kb):           0.
+  
+                          Minor page faults:        63164
+                          Major page faults:            0
+                 Voluntary context switches:         2891

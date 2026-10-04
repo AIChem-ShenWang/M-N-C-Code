@@ -1,0 +1,25 @@
+SYSTEM = DOS
+ISTART = 1
+ICHARG = 11
+ISPIN = 2
+PREC = Accurate
+
+ALGO = All
+NELM = 1
+ENCUT = 520
+
+# 固定离子位置
+IBRION = -1
+NSW = 0
+
+# 范德华修正
+IVDW = 11
+
+# DOS计算专用参数
+ISMEAR = 0
+SIGMA = 0.05
+NEDOS = 2000
+LORBIT = 11
+
+LASPH = .TRUE.
+ISYM = 0

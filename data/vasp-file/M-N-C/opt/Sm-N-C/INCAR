@@ -1,0 +1,20 @@
+SYSTEM = OPT
+ISTART = 0
+ICHARG = 2
+ISPIN = 2
+PREC = Accurate
+
+ALGO = All
+NELM = 80
+EDIFF = 1E-5
+ENCUT = 520
+
+IBRION = 1
+POTIM = 0.05
+NSW = 300
+ISIF = 2
+EDIFFG = -0.03
+IVDW = 11 # DFT-D3范德华修正
+
+ISMEAR = 0
+SIGMA = 0.1

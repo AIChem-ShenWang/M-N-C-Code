@@ -75,18 +75,3 @@ VASP, PBE, `potpaw_PBE` (5.4.4) from `data/5.4.4 VASP POTCAR/PBE/potpaw_PBE`; C 
 | Bi | Bi_d | | | | |
 
 All others use the element name.
-
-### Energy evaluation and the stability descriptors
-
-Every system goes through three stages in one `work/` directory, reusing `WAVECAR` and `CHGCAR` in place: `opt` (relaxation, `IBRION` = 2, `NSW` = 300, `EDIFFG` = −0.03 eV/Å) → `energy` (single point on the relaxed structure) → `dos` (non-self-consistent, `ICHARG` = 11). The `energy` stage is the source of every stability number; the geometry descriptors come from `CONTCAR`. From $E(\text{M-N}_4\text{-C})$, the shared reference $E(\text{N}_4\text{C})$ and the two isolated-metal references:
-
-\[
-E_{b} = E(\text{M-N}_4\text{-C}) - E(\text{N}_4\text{C}) - E(M_\text{atom}), \qquad
-E_{f} = E(\text{M-N}_4\text{-C}) - E(\text{N}_4\text{C}) - E(M_\text{bulk})
-\]
-
-\[
-U_{diss}(\text{pH}) = U_{diss}^{\circ} - \frac{E_{f}}{z} + 0.0592 \times \text{pH}
-\]
-
-where $E(M_\text{atom})$ is the isolated atom in a 15 Å box at Γ (`data/vasp-file/M/<M>/OUTCAR`), $E(\text{N}_4\text{C})$ the one metal-free slab (`data/vasp-file/N-C/energy/OUTCAR`), $E(M_\text{bulk})$ the experimental cohesive energy (`data/atom-table/bulk energy.xlsx`), and $z$ and $U_{diss}^{\circ}$ from `data/atom-table/potential.xlsx`. A negative $E_{f}$ means the single atom is preferred to the bulk, and $U_{diss} \ge 0$ means it resists dissolution at that pH (0 for acid, 14 for base). These three are the regression targets and what `stable table generator.py` screens on.
